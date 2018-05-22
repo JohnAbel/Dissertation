@@ -1,0 +1,103 @@
+\chapter{Summary and future directions: proposed study of the suprachiasmatic nucleus}
+
+
+The prior three chapters discussed new results in understanding the network structure of the SCN, the development of the SCN, and how electrical signals transmitted within the SCN function to set the circadian clock.
+These results have generally shown that the SCN is highly heterogeneous and integrates numerous signaling pathways into its function.
+Although many researchers have discovered much about the structure and function of the SCN over the past decade, many fundamental questions remain, especially in quantitatively linking our understanding of the SCN across timescales.
+In this chapter, I present two potential avenues for further study of the SCN and its properties.
+
+
+\section{Role of dimerization in circadian rhythm stability}
+Dimerization is a common motif in circadian oscillation, and heterodimeric transcription factors have been identified in many species including the mouse \cite{Ko2006}, \textit{Drosophila} \cite{Darlington1998}, and \textit{Arabidopsis} \cite{McClung2006b}.
+Why might this be?
+One possible reason is that dimerization may provide a means of resistance to stochastic fluctuations in molecular species count, and thus increases circadian precision.
+Dimerizaton reactions are fast relative to transcription, and are reversible, and so the dimerization reaction could function as a buffer against large-amplitude but ultradian (i.e.\ shorter than 24 h timescale) fluctuations in individual clock products.
+A conceptually-similar structure for stabilizing ATP availability has recently been studied using a controls approach \cite{Hancock2017}, which could provide a blueprint by which to approach this question.
+Although, as stated in \cite{Hancock2017}, the fast kinetics of the buffering (here, dimerization) can lead to high-frequency noise, this noise would likely be rapidly damped out by the subsequent low-pass filtering of downstream metabolic pathways or the slow transcriptional dynamics.
+
+Although the approach of \cite{Hancock2017} would be of use here, the mathematical techniques rely on a linearization about a stable fixed point.
+This would be a shaky assumption for the circadian oscillator, as the durations of stochastic fluctuations are not necessarily much shorter than circadian oscillation.
+Thus, a potentially useful tool in approaching this question would be the ability to isolate a single reaction or pathway within a model to determine how its structure affects the precision of an emergent property of the system, such as oscillatory period.
+This is particularly challenging for complex stochastic systems, as nonlinear interactions between system components invalidates some assumptions commonly used in sensitivity analysis of stochastic systems.
+The isolation of this pathway could be achieved by incorporating a single stochastic reaction pathway in an otherwise deterministic model.
+The prospect of building such a hybrid stochastic-deterministic solver has been discussed with Professor Brian Drawert (UNC Asheville, formerly postdoctoral researcher at UC Santa Barbara) and is currently under construction as part of the GillesPy2 software package for stochastic simulation, an updated version of the package we have previously released \cite{Abel2017}.
+Using this hybrid solver, one could feasibly compare the oscillatory precision of an oscillator with only a single stochastic reaction pathway.
+For example, a circadian model could include only stoachastic translation and dimerization, with all other reactions deterministic, in order to directly attribute the resulting precision to the structure of that single pathway.
+In this manner, the precision could be compared between monomeric, homodimeric, or heterodimeric methods of transcriptional repression.
+By keeping the total species counts constant between monomeric, homodimeric, and heterodimeric structures, one could directly test if heterodimerization provides benefits in oscillatory precision in comparison to alternate reaction structures while maintaining identical cellular energy consumption for transcription and translation.
+
+By a combination of these techniques, we may then determine if dimerization is able to buffer against stochastic fluctuations in molecule count. 
+While a positive result would not prove conclusively that this is the impetus for this convergent motif in circadian oscillation, it might provide an additional tool in the design of precise synthetic biological oscillators \cite{Potvin2016}.
+
+
+
+
+\section{Quantification of neurotransmitter release and dynamics in the suprachiasmatic nucleus}
+As mentioned in the prior chapter, despite the well-known role of VIP in circadian oscillation, there is relatively little known about the numerous other pathways of neurotransmission that contribute to the circadian oscillations of the SCN.
+There is ample opportunity to quantify neurotransmission by standard neurobiological techniques for relating electrical activity with neurotransmitter release, and ultimately with phase shifting and entrainment in the clock.
+These results could be then related by modeling approaches to better understand circadian function.
+I believe this work is ultimately necessary for understanding population dynamics of the SCN, as there is currently a plethora of fundamental unanswered questions regarding SCN intercellular communication.
+Here, I will attempt to present an approach for addressing some of these questions with experiments and modeling.
+
+\subsection*{Experimental approach}
+A thorough experimental approach would possibly involve dual whole-cell patch clamp recordings of neuronal membrane potential within an SCN culture, similar to approaches in \cite{Fan2015}.
+Notably, Fan \textit{et al.} found that VIP and AVP neuronal populations project similarly within the SCN, indicating that there may be a general rule for how circadian neurotransmission networks are structured.
+Techniques such as the optical tagging used in the previous chapter could be used to identify the neurotransmitter content of the presynaptic cell, and the patch clamp could then be used to observe the postsynaptic electrophysiological response to presynaptic action potentials and neurotransmitter release.
+This would further differentiate between neurotransmitters that elicit primarily ionotropic responses (neurotransmitter release and uptake that directly results in cellular depolarization) or primarily metabotropic responses (that which indirectly changes membrane excitability through metabolic intermediates).
+It is highly likely that ionotropic and metabotropic signaling work in concert to drive circadian synchrony, though the exact relationship between these systems is uncharacterized.
+Unfortunately, these experiments are extremely time consuming, especially due to the wide variety of neurotransmitters in the SCN, and the likelihood of corelease \cite{Herzog2017}.
+
+An alternate approach might involve more thoroughly analyzing electrical activity in SCN cultures using calcuim fluorescence to track subthreshold electrical activity.
+It would be ideal in this case to analyze shorter (1-2h) recordings that are not limited to spiking alone, to correlate subthreshold excitatory or inhibitory postsynaptic potentials (EPSPs or IPSPs) with presynaptic neuronal firing events.
+This approach would still require identification of the neurotransmitter content of each neuron by optical tagging, or more simply applying a potent mix of antagonists for each undesired receptor.
+Furthermore, ionotropic and metabotropic postsynaptic responses could be differentiated by observing the timescale at which each occurs: ionotropic signaling lasts approximately 10-20 ms following a presynaptic action potential, whereas metabotropic signals last for in excess of 100 ms \cite{fain1999}.
+Subthreshold recording of simultaneous electrical activity from numerous cells via fluorescent calcium reporters is still in a nascent stage \cite{Chen2013a}, but has strong potential for improving understanding of the SCN.
+
+Ionotropic neurotransmission may modify instantaneous neurotransmitter release, but direct modulation of transcriptional activity or phosphorylational states of clock products is governed by the downstream mediators of metabotropic pathways.
+Only metabotropic pathways directly affect the circadian clock.
+It is important to identify the specific GPCR pathways that mediate response to each neurotransmitter, because each involves differing response dynamics, effectors, secondary messengers, and mediators.
+GPCR pathways can be differentiated by already-established techniques in neurobiology (e.g.\ inhibition of specific GPCRs such as G$_i$ inhibition by pertussis \cite{Aton2006}; or blockade of downstream effectors such as adenylyl cyclase and phosholipase C \cite{An2011}).
+The diversity of pathways by which GPCRs affect cellular metabolism might immediately suggest that these pathways are therefore divergent.
+However, GPCR signaling is thought to be generally convergent \cite{fain1999}, and signals to the clock likely converge in phosphorylation or dephosphorylation of clock transcription factors such as CREB, or clock products themselves.
+These phosphorylation responses can be studied directly, or inferred from previously-collected data about the downstream paths of metabotropic signaling specific to the SCN or the hypothalamus in general.
+Most encouragingly, some of these data have already been collected.
+Prior studies have identified adenylyl cyclase and phospholipase C as the primary effectors of VIP, though, confusingly, these are generally thought to be part of the independent G$_s$ and G$_q$ pathways \cite{fain1999, An2011}.
+However, both pathways result in downstream phosphorylation, closing of voltage-gated potassium channels, and ultimately excitation of the cellular membrane.
+In a similarly confusing fashion, the neurotransmitter GABA is thought to have both excitatory and inhibitory effects in the SCN, depending on local chloride concentration \cite{DeWoskin2015}.
+Clearly, further study is needed here to more exactly resolve the roles of these pathways, despite their being the most thoroughly studied paths of neurotransmission in the SCN.
+
+Finally, the timing of the neurotransmitter release will play an important role in phase shifting and entrainment.
+Therefore, it is important to study the excitatory and inhibitory signals that result in the persistent electrical activity of the circadian day in SCN neurons, and silencing during circadian night.
+Nighttime silencing is likely mediated by metabotropic pathways and the circadian clock itself, since the timescale of ionotropic signalling is very short.
+These experiments would be best approached hand-in-hand with modeling of the signal transmission pathways.
+
+\subsection*{Modeling approach}
+While the suggested experimental work is technically simple but time-consuming, a particular challenge will be in quantifying the relationships between neurotransmission pathways, and thus being able to use these to better understand the overall population dynamics of the SCN.
+For example, while it is feasible to identify the pathway by which each neurotransmitter acts, it is infeasible to do so at every circadian phase or under every condition of transmitter co-release.
+Here, computational approaches may be of use.
+One further computational challenge will be in relating circadian dynamics (i.e.\ dynamics at at 24 h timescale) with electrical dynamics, which have millisecond resolution.
+The challenge of computational power could be resolved simply by finding the power to perform such extreme simulations.
+This approach has recently yielded some results in linking the circadian and electrical timescales \cite{DeWoskin2015}.
+Clever uses of modeling and system identification tools could also greatly simplify this problem.
+
+In general, the transient change to neuronal internal state resulting from a single action potential decays rapidly and returns to baseline in less than 1 s.
+Transcription would therefore function as a low-pass filter mediating this process, and only sustained firing (and thus sustained neurotransmission) has the potential to appreciably phase shift the circadian clock.
+Intuitively, a potential simplification to the simultaneous modeling of these pathways could be achieved, then, by searching for timescale separations between processes and performing frequency domain analysis on neurotransmission pathways to determine their effects on clock gene transcription.
+To perform this analysis, one must linearize about a steady or pseudo-steady state, which is generally a poor assumption due to the oscillatory nature of the clock.
+However, it could be possible instead to perform multiple linearizations corresponding to different circadian phases, and thus identify a range of dynamic responses to input stimuli.
+The results of this analysis will then dictate the level of modeling detail needed to accurately capture intercellular communication dynamics.
+Importantly, this would allow the use of a slow dynamic state corresponding to general cellular firing rate in models of circadian dynamics, rather than modeling each individual spike, as has been previously done.
+Modeling each spike is particularly onerous due to the extreme stiffness of models such as Hodgkin-Huxley.
+
+
+
+
+\subsection*{A path to control the SCN}
+The proposed modeling approaches of the prior section may also yield advances toward control of circadian rhythms.
+From an engineering and medical perspective, GPCRs in particular provide enticing targets for pharmaceutical intervention, due to their high selectivity for their agonists, and the ability to target GPCRs expressed by small subclasses of neurons \cite{Klabunde2002,Okuno2008}.
+In a conceptually similar fashion, VIP application (targeting the VPAC2R VIP receptor) has been used to speed entrainment \textit{in vivo} following shifts in environmental phase \cite{An2013}.
+The further elucidation of the roles of these pathways will likely enable the precise targeting of new pharmaceutical inputs to the core circadian clock.
+An open theoretical question, then, is how best to dose these drugs to achieve the desired dynamic response, as we have seen that stimulation of VIP neurons results in drastically different effects at different times of day.
+Control theory provides a mathematical framework for broadly approaching this question.
+In Section II, I begin to approach this question by formulating phase control of the circadian clock as an optimal control problem.
+

@@ -1,0 +1,100 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\citation{Ramkisoensing2015}
+\citation{Panda2002,Bass2010}
+\citation{Ukai2007,StJohn2014b,Gan2017}
+\citation{Bagheri2008,Serkh2014,Zhang2016}
+\citation{Ishiura1998}
+\citation{Glossop1999}
+\citation{Huang2003,Goodwin1965}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Model predictive control for synchronous phase shifting of circadian oscillator populations}{149}{chapter.7}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Introduction}{149}{section.7.1}}
+\newlabel{sec:background}{{7.1}{149}{Introduction}{section.7.1}{}}
+\citation{StJohn2014b}
+\citation{Abel2016b}
+\citation{Slaby2007,Bagheri2007,Shaik2008,Bagheri2008,Serkh2014,Zhang2016,Abel2016b,Abel2017a}
+\citation{Abel2016b,Abel2017a}
+\citation{Takahashi2016}
+\citation{Hirota2012a,StJohn2014a}
+\citation{StJohn2014a}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Control of a single circadian oscillator}{151}{section.7.2}}
+\newlabel{sec:single}{{7.2}{151}{Control of a single circadian oscillator}{section.7.2}{}}
+\citation{StJohn2014a}
+\citation{StJohn2014a}
+\citation{Taylor2008,Abel2016b}
+\newlabel{eq:cry1}{{7.1}{152}{}{equation.7.2.1}{}}
+\newlabel{eq:cphase}{{7.2}{152}{}{equation.7.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces Schematic of mammalian circadian oscillator and effect of KL001. (\textbf  {A}) Diagram of the core negative feedback loop driving mammalian circadian rhythms. This schematic is adapted from Figure \ref  {fig:0} for easy reference. All states and reactions shown are included explicitly in the model (from \cite  {StJohn2014a}) as shown in Table~\ref  {tab:stjohnmodel}. (\textbf  {B}) Parametric infinitesimal PRC describing response to KL001 (reduction in parameter $v_{dCn}$). Note that this is double plotted to allow visualization. (\textbf  {C}) Synchrony of a population is affected by timing of KL001 application. Two example probability density functions (PDFs) of phase are plotted before (solid) and after (dashed) application of KL001 at the phases shown. In regions of positive slope (blue), the phase PDF is dispersed, whereas in regions of negative slope (red), the PDF is condensed, even though the mean phase is unchanged.\relax }}{153}{figure.caption.63}}
+\newlabel{fig:fig1}{{7.1}{153}{Schematic of mammalian circadian oscillator and effect of KL001. (\textbf {A}) Diagram of the core negative feedback loop driving mammalian circadian rhythms. This schematic is adapted from Figure \ref {fig:0} for easy reference. All states and reactions shown are included explicitly in the model (from \cite {StJohn2014a}) as shown in Table~\ref {tab:stjohnmodel}. (\textbf {B}) Parametric infinitesimal PRC describing response to KL001 (reduction in parameter $v_{dCn}$). Note that this is double plotted to allow visualization. (\textbf {C}) Synchrony of a population is affected by timing of KL001 application. Two example probability density functions (PDFs) of phase are plotted before (solid) and after (dashed) application of KL001 at the phases shown. In regions of positive slope (blue), the phase PDF is dispersed, whereas in regions of negative slope (red), the PDF is condensed, even though the mean phase is unchanged.\relax }{figure.caption.63}{}}
+\newlabel{eq:ephase}{{7.3}{154}{}{equation.7.2.3}{}}
+\newlabel{eq:discretephase}{{7.6}{154}{}{equation.7.2.6}{}}
+\citation{Abel2017a}
+\newlabel{eq:phierror}{{7.7}{155}{}{equation.7.2.7}{}}
+\newlabel{eq:mpcoptim}{{7.8}{155}{}{equation.7.2.8}{}}
+\citation{Andersson2012}
+\citation{Welsh2010}
+\citation{Ukai2007,StJohn2014b}
+\citation{StJohn2014b}
+\newlabel{ssec:applysc}{{7.2}{156}{}{equation.7.2.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Control of population phase and synchrony}{156}{section.7.3}}
+\citation{StJohn2014b}
+\citation{StJohn2014b}
+\newlabel{ssec:scpop}{{7.3}{157}{}{section.7.3}{}}
+\newlabel{eq:poppredictor}{{7.9}{157}{}{equation.7.3.9}{}}
+\newlabel{eq:wnbsol}{{7.11}{157}{}{equation.7.3.11}{}}
+\citation{StJohn2014b}
+\newlabel{ssec:popmpc}{{7.3}{158}{}{figure.caption.65}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces Application of the single-oscillator controller for a single oscillator achieving a phase delay of $6$h ($\Delta \phi = -\pi /2$) with $t_{shift} = 12$h. The controller acts immediately beginning at $t=12$h, and completes the phase delay to align with the desired reference trajectory after the PRC returns to a negative value. Note that the initial negative region of the PRC is elongated due to control slowing the advance of phase and maintaining the oscillator in a phase with a negative PRC for longer.\relax }}{159}{figure.caption.64}}
+\newlabel{fig:fig2}{{7.2}{159}{Application of the single-oscillator controller for a single oscillator achieving a phase delay of $6$h ($\Delta \phi = -\pi /2$) with $t_{shift} = 12$h. The controller acts immediately beginning at $t=12$h, and completes the phase delay to align with the desired reference trajectory after the PRC returns to a negative value. Note that the initial negative region of the PRC is elongated due to control slowing the advance of phase and maintaining the oscillator in a phase with a negative PRC for longer.\relax }{figure.caption.64}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.3}{\ignorespaces Application of the single-oscillator controller for a phase delay of $6$ h ($\Delta \phi = -\pi /2$) with $t_{shift} = 12$ h, for shifting mean phase of a population of 200 circadian oscillators (individual trajectories plotted in gray). While control is applied in nearly the same regions as Fig.~\ref  {fig:fig1} and a $-6$ h shift was attained, this resulted in a dispersion of phase, a decrease in synchrony index, and a reduction in mean oscillatory amplitude.\relax }}{159}{figure.caption.65}}
+\newlabel{fig:fig3}{{7.3}{159}{Application of the single-oscillator controller for a phase delay of $6$ h ($\Delta \phi = -\pi /2$) with $t_{shift} = 12$ h, for shifting mean phase of a population of 200 circadian oscillators (individual trajectories plotted in gray). While control is applied in nearly the same regions as Fig.~\ref {fig:fig1} and a $-6$ h shift was attained, this resulted in a dispersion of phase, a decrease in synchrony index, and a reduction in mean oscillatory amplitude.\relax }{figure.caption.65}{}}
+\newlabel{eq:mpcPDFoptim}{{7.17}{160}{}{equation.7.3.17}{}}
+\newlabel{ssec:popapply}{{7.3}{161}{}{equation.7.3.17}{}}
+\citation{Dunlap2004}
+\newlabel{sec:conc}{{7.4}{162}{Summary\label {sec:conc}}{section.7.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}Summary}{162}{section.7.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.4}{\ignorespaces Application of the phase PDF controller to achieve a phase delay of $6$ h ($\Delta \phi = -\pi /2$) at $t_{shift} = 12$ h for a population of 200 oscillators (individual trajectories plotted in gray). This controller explicitly accounted for synchrony of the population. After a brief input to begin the shift, the controller delayed the majority of its input to find a region where population synchrony would be maintained. Indeed, synchrony is slightly improved by the control action, and a phase delay of $6h$ was achieved.\relax }}{164}{figure.caption.66}}
+\newlabel{fig:fig4}{{7.4}{164}{Application of the phase PDF controller to achieve a phase delay of $6$ h ($\Delta \phi = -\pi /2$) at $t_{shift} = 12$ h for a population of 200 oscillators (individual trajectories plotted in gray). This controller explicitly accounted for synchrony of the population. After a brief input to begin the shift, the controller delayed the majority of its input to find a region where population synchrony would be maintained. Indeed, synchrony is slightly improved by the control action, and a phase delay of $6h$ was achieved.\relax }{figure.caption.66}{}}
+\@setckpt{chap7/emerging}{
+\setcounter{page}{165}
+\setcounter{equation}{18}
+\setcounter{enumi}{3}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{2}
+\setcounter{chapter}{7}
+\setcounter{section}{4}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{4}
+\setcounter{table}{0}
+\setcounter{newflo@tctr}{4}
+\setcounter{ContinuedFloat}{0}
+\setcounter{subfigure}{0}
+\setcounter{subtable}{0}
+\setcounter{parentequation}{7}
+\setcounter{subequation}{0}
+\setcounter{NAT@ctr}{0}
+\setcounter{vrcnt}{0}
+\setcounter{Item}{3}
+\setcounter{Hfootnote}{9}
+\setcounter{bookmark@seq@number}{37}
+\setcounter{asm}{4}
+\setcounter{thm}{2}
+\setcounter{cor}{0}
+\setcounter{defn}{2}
+\setcounter{LT@tables}{0}
+\setcounter{LT@chunks}{0}
+\setcounter{lstnumber}{1}
+\setcounter{float@type}{16}
+\setcounter{model}{0}
+\setcounter{section@level}{0}
+\setcounter{lstlisting}{0}
+}

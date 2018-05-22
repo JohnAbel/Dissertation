@@ -1,0 +1,43 @@
+\select@language {english}
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}An introduction to circadian rhythms}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}The mammalian circadian control system}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Quantitative analysis of circadian dynamics}{9}{section.1.3}
+\contentsline {section}{\numberline {1.4}Taking control of the clock}{22}{section.1.4}
+\contentsline {section}{\numberline {1.5}Conclusions}{26}{section.1.5}
+\contentsline {part}{I\hspace {1em}Circadian Rhythms in the Suprachiasmatic Nucleus: Networks, Development, and Electrical Activity}{28}{part.1}
+\contentsline {chapter}{\numberline {2}Inferring the functional network corresponding to synchrony in the suprachiasmatic nucleus}{29}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{29}{section.2.1}
+\contentsline {section}{\numberline {2.2}Materials and methods}{31}{section.2.2}
+\contentsline {section}{\numberline {2.3}Results}{37}{section.2.3}
+\contentsline {section}{\numberline {2.4}Discussion}{59}{section.2.4}
+\contentsline {chapter}{\numberline {3}Ontogeny of circadian rhythms and synchrony in the suprachiasmatic nucleus}{62}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{62}{section.3.1}
+\contentsline {section}{\numberline {3.2}Materials and methods}{63}{section.3.2}
+\contentsline {section}{\numberline {3.3}Results}{66}{section.3.3}
+\contentsline {section}{\numberline {3.4}Discussion}{76}{section.3.4}
+\contentsline {chapter}{\numberline {4}The role of neuronal firing patterns in VIP and non-VIP neuronal populations of the suprachiasmatic nucleus}{79}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{79}{section.4.1}
+\contentsline {section}{\numberline {4.2}Materials and methods}{81}{section.4.2}
+\contentsline {section}{\numberline {4.3}Results}{87}{section.4.3}
+\contentsline {section}{\numberline {4.4}Discussion}{105}{section.4.4}
+\contentsline {chapter}{\numberline {5}Summary and future directions: proposed study of the suprachiasmatic nucleus}{108}{chapter.5}
+\contentsline {section}{\numberline {5.1}Role of dimerization in circadian rhythm stability}{108}{section.5.1}
+\contentsline {section}{\numberline {5.2}Quantification of neurotransmitter release and dynamics in the suprachiasmatic nucleus}{110}{section.5.2}
+\contentsline {part}{II\hspace {1em}Control of the Mammalian Circadian Oscillator}{114}{part.2}
+\contentsline {chapter}{\numberline {6}Pharmaceutical-based entrainment of circadian phase via nonlinear model predictive control}{115}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{115}{section.6.1}
+\contentsline {section}{\numberline {6.2}Phase-reduced model and optimal phase shifting }{117}{section.6.2}
+\contentsline {section}{\numberline {6.3}Closing the loop: designing a PRC-based nonlinear MPC}{129}{section.6.3}
+\contentsline {section}{\numberline {6.4}In silico application of designed MPC controller for phase resetting}{142}{section.6.4}
+\contentsline {section}{\numberline {6.5}Summary}{147}{section.6.5}
+\contentsline {chapter}{\numberline {7}Model predictive control for synchronous phase shifting of circadian oscillator populations}{149}{chapter.7}
+\contentsline {section}{\numberline {7.1}Introduction}{149}{section.7.1}
+\contentsline {section}{\numberline {7.2}Control of a single circadian oscillator}{151}{section.7.2}
+\contentsline {section}{\numberline {7.3}Control of population phase and synchrony}{156}{section.7.3}
+\contentsline {section}{\numberline {7.4}Summary}{162}{section.7.4}
+\contentsline {chapter}{\numberline {8}Summary and future directions: preliminary and proposed studies of circadian control}{165}{chapter.8}
+\contentsline {section}{\numberline {8.1}Closing the loop: development of a circadian phase sensor}{165}{section.8.1}
+\contentsline {section}{\numberline {8.2}Critical-resetting MPC: leveraging the limit-cycle fixed point}{167}{section.8.2}
+\contentsline {section}{\numberline {8.3}Conclusion}{174}{section.8.3}

@@ -1,0 +1,47 @@
+\section*{}
+
+
+{\vspace*{-1in}
+    Dissertation Advisor: Professor Francis J. Doyle III \hfill John H. Abel
+
+    \begin{center}
+{A Computational Approach to Analysis and Control of the Mammalian Circadian Oscillator}
+\vspace{0.5cm}
+Abstract
+\end{center}
+
+\RaggedRight
+
+Circadian rhythms, endogenous, entrainable, near-24 h oscillations in metabolism, are a nearly ubiquitous feature of life on Earth.
+Circadian rhythms function as a feedforward biological control system that reorganizes cellular metabolism in anticipation of daily predictable changes in the environment.
+Because circadian regulation mediates many physiological processes, there is widespread interest in understanding the system generating mammalian circadian rhythms, and developing techniques for reliably manipulating that system through exogenous stimuli such as light or pharmaceuticals.
+In this dissertation I approach these questions using computational and theoretical tools from dynamical systems and control theory.
+
+The first portion of this dissertation consists of collaborative studies investigating the organization of the mammalian hypothalamic suprachiasmatic nucleus (SCN), the master pacemaker.
+First, I examined the network structure driving synchrony in the SCN.
+To observe the network, we desynchronized the SCN using a toxin that prevents neurotransmitter release, then applied an information theoretic metric to correlate circadian gene expression between neurons as they resynchronized spontaneously.
+We found that the functional network observed during resynchronization is small-world but not scale-free, with hubs primarily located in the central SCN.
+Next, I present results from a study of the development of circadian rhythms and synchrony in the embryonic SCN.
+By explanting fetal SCN and recording circadian bioluminescent reporters, we found that circadian rhythms become autonomous within the fetal SCN by embryonic day 14.5 following mating, and synchronize spontaneously around embryonic day 15.5.
+Intriguingly, spontaneous synchrony preceded the expression of the neuropeptide VIP and its receptor, the primary pathway of neurotransmission associated with synchrony in the mature SCN.
+Finally, I present a study of the relationship between electrical activity and VIP release in the SCN.
+Using optical tagging, we found that VIP and non-VIP neurons of the SCN express distinct firing patterns that are consistent across multiple days despite prolonged silences in firing at circadian night.
+Furthermore, firing at frequencies observed in SCN recordings resulted in phase delays \textit{in vitro} that are abolished by a VIP antagonist, and phase delays \textit{in vivo}.
+These three studies highlight the complex nature of neurotransmission in the SCN.
+Most importantly, these studies indicate that VIP is not the only significant neurotransmitter driving SCN synchrony, as VIP does not exactly explain the network structure, synchrony appears before VIP expression, and VIP evokes primarily phase delays though the SCN can exhibit advances or delays.
+
+The second portion of this dissertation discusses the inverse problem: optimal resetting of circadian phase.
+First we formulated the optimal phase shifting problem by reducing a multistate mechanistic model of circadian oscillation to a phase-only formulation, with the control input included as a parametric phase sensitivity.
+We then applied Pontyagin's maximum principle, and show that this is a steering problem, where the optimal path to resetting is applying either maximal advances or delays.
+Next, we derived bounds on the errors incurred by applying model predictive control (MPC) rather than an optimal control policy, and demonstrate \textit{in silico} results for two real-world scenarios of phase resetting.
+Finally, I present a study showing that the single-oscillator control approach may be inappropriate when considering that the body is comprised of numerous oscillators.
+We showed that a simple modification of the MPC optimization is sufficient to maintain oscillator synchrony and still achieve phase control.
+
+In both portions, I conclude by providing several paths of future study that remain unaddressed.
+The studies within this dissertation indicate that control of circadian oscillation in mammals is within reach.
+
+
+
+
+}
+

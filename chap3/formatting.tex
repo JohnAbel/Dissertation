@@ -1,0 +1,168 @@
+
+
+
+\begin{table*}[p]
+    \caption{Ordinary differential equations and parameters comprising the 3-state circadian model [35,36].}
+\label{tab:3st}
+\begin{center}
+{
+\begin{tabular}{l l l}\hline
+	State Variable & Symbol & Conservation Equation\\
+	\hline\\
+	mRNA & \textbf{M} & $\displaystyle\frac{d\mathbf{M}}{dt} = 
+	v_s\frac{K_1^n}{K_1^n + \mathbf{PN}^n} 
+	- \frac{v_m\mathbf{M}}{K_m+\mathbf{M}}
+	$\\[0.6cm]
+	Cytosolic protein & \textbf{PC} & $\displaystyle\frac{d\mathbf{PC}}{dt} 
+	= k_s\mathbf{M} - \frac{v_d\mathbf{PC}}{K_d + \mathbf{PC}} 
+	- k_1\mathbf{PC} + k_2\mathbf{PN}
+	$\\[0.6cm]
+	Nuclear protein & \textbf{PN} & $\displaystyle\frac{d\mathbf{PN}}{dt} 
+	= k_1\mathbf{PC} - k_2\mathbf{PN}
+	$\\[0.6cm]
+    \hline
+\end{tabular}
+\begin{tabular}{l l l l}\hline
+	Parameter & Description & Value & Units\\
+	\hline\\
+	$v_s^0$ & Minimum mRNA transcription rate & 0.82 & [-]/hr\\
+	$w$ & Weighting of connected cells & 0.0050 & Dimensionless \\
+	$a$ & Coupling strength & 2 & 1/hr\\
+	$c_j$ & Coupling term for cell $j$ &  
+	$a\bigg(\frac{\mathbf{M_j} + w\sum \mathbf{M_i}}{1+
+	I\times w} -\mathbf{M_j}\bigg)$\\
+	$v_s$ & mRNA transcription rate & $\displaystyle v_s^0 + c_j$ 
+	& [-]/hr \\
+	$n$ & mRNA transcription Hill term & 4.0 & Dimensionless\\
+	$K_1$ & mRNA transcription constant & 1.0 & [-]\\
+	$v_m$ & mRNA degradation rate & 0.42 & [-]/hr\\
+	$K_m$ & mRNA degradation constant & 0.50 & [-]\\
+	$k_s$ & Protein translation rate & 0.42 & 1/hr\\
+	$v_d$ & Cytosolic protein degradation rate & 1.2 & [-]/hr\\
+	$K_d$ & Cytosolic protein degradation constant & 0.13 & [-]\\
+	$k_1$ & Cytosolic to nuclear protein rate & 0.42  & 1/hr\\
+	$k_2$ & Nuclear to cytosolic protein rate & 0.50 & 1/hr\\
+	\hline
+\end{tabular}
+}
+\vspace{0.5cm}
+For these equations $j$ indicates the index of the current cell, $i$ indicates the indexes of cells coupled to cell $j$, and $I$ is the total number of cells coupled to cell $j$.
+\end{center}
+\end{table*}
+
+\begin{table}[p]
+    \caption{Ordinary differential equations and parameters comprising the 11-state circadian model [37].}
+\label{tab:11st}
+\begin{center}
+{
+\begin{tabular}{l l l}\hline
+	State Variable & Symbol & Conservation Equation\\
+	\hline\\
+	\textit{Per} mRNA & \textbf{p} & $\displaystyle\frac{d\mathbf{p}}{dt} = \frac{v_{1pp}\mathbf{CREB} + v_{2pr}}{K_{1p} + \mathbf{C1P}+ \mathbf{C2P}} - \frac{v_{3p}\mathbf{p}}{K_{2dp}+\mathbf{p}}$
+	\\[0.4cm]
+	\textit{Cry1} mRNA & \textbf{c1} & $\displaystyle\frac{d\mathbf{c1}}{dt} = \frac{v_{4c1r}}{K_{3c} + \mathbf{C1P}+ \mathbf{C2P}} - \frac{v_{5c1}\mathbf{c1}}{K_{4dc}+\mathbf{c1}}
+$ 
+	\\[0.4cm]
+	\textit{Cry2} mRNA & \textbf{c2} & $\displaystyle\frac{d\mathbf{c2}}{dt} = \frac{v_{6c2r}}{K_{3c} + \mathbf{C1P}+ \mathbf{C2P}} - \frac{v_{7c2}\mathbf{c2}}{K_{4dc}+\mathbf{c2}}
+$ 
+	\\[0.4cm]
+	\textit{VIP} mRNA & \textbf{vip} & $\displaystyle\frac{d\mathbf{vip}}{dt} = \frac{v_{8vr}}{K_{5v} + \mathbf{C1P}+ \mathbf{C2P}} - \frac{v_{9v}\mathbf{vip}}{K_{6dv}+\mathbf{vip}}
+$ 
+	\\[0.4cm]
+	\textit{Per} Protein & \textbf{PER} & {
+		$\displaystyle\frac{d\mathbf{P}}{dt} = k_{1p}\mathbf{p} - \frac{v_{10P}\mathbf{P}}{K_{7dP}+\mathbf{P}} - v_{11aCP}\mathbf{P}\times\mathbf{C1}- v_{11aCP}\mathbf{P}\times\mathbf{C2} + v_{12dCP}\mathbf{C1P} + v_{12dCP}\mathbf{C2P}
+	$ }
+	\\[0.4cm]
+	\textit{Cry1} Protein & \textbf{C1} & $\displaystyle\frac{d\mathbf{C1}}{dt} = k_{2c}\mathbf{c1} - \frac{v_{13C1}\mathbf{C1}}{K_{8dC}+\mathbf{C1}} - v_{11aCP}\mathbf{P}\times\mathbf{C1} + v_{12dCP}\mathbf{C1P}
+$ 
+	\\[0.4cm]
+	\textit{Cry2} Protein & \textbf{C2} & $\displaystyle\frac{d\mathbf{C2}}{dt} = k_{2c}\mathbf{c2} - \frac{v_{14C2}\mathbf{C2}}{K_{8dC}+\mathbf{C2}} - v_{11aCP}\mathbf{P}\times\mathbf{C2} + v_{12dCP}\mathbf{C2P}
+$ 
+	\\[0.4cm]
+	\textit{VIP} Protein & \textbf{VIP} & $\displaystyle\frac{d\mathbf{VIP_j}}{dt} = k_{3v}\sum\limits_{i}^I w_i\mathbf{vip_i} - v_{15V}\mathbf{VIP_j}
+$ 
+	\\[0.4cm]
+	CRY1-PER Dimer & \textbf{C1P} & $\displaystyle\frac{d\mathbf{C1P}}{dt} = v_{11aCP}\mathbf{P}\times\mathbf{C1} - v_{12dCP}\mathbf{C1P} - \frac{v_{16C1P}\mathbf{C1P}}{K_{9dCn}+\mathbf{C1P} + \mathbf{C2P}}
+$ 
+	\\[0.4cm]
+	CRY2-PER Dimer & \textbf{C2P} & $\displaystyle\frac{d\mathbf{C2P}}{dt} = v_{11aCP}\mathbf{P}\times\mathbf{C2} - v_{12dCP}\mathbf{C2P} - \frac{v_{17C2P}\mathbf{C2P}}{K_{9dCn}+\mathbf{C1P} + \mathbf{C2P}}
+$ 
+	\\[0.4cm]
+	CREB Protein & \textbf{CREB} & $\displaystyle\frac{d\mathbf{CREB}}{dt} = \frac{v_{18V}\mathbf{VIP}}{K_{10V}+\mathbf{VIP}} - \frac{v_{19CR}\mathbf{CREB}}{K_{11dCR}+\mathbf{CREB}}
+$\\[0.4cm] 
+\hline
+\end{tabular}
+\begin{tabular}{l l l l}\hline
+	Parameter & Description & Value & Units\\
+	\hline
+	$v_{1pp}$ & CREB-induced \textit{Per} mRNA promotion & 0.235 & [-]/hr
+	\\
+	$v_{2pr}$ & \textit{Per} mRNA transcription & 0.415 & [-]$^2$/hr
+	\\
+	$v_{3p}$ & \textit{Per} mRNA degradation & 0.478 & [-]/hr
+	\\
+	$v_{4c1r}$ & \textit{Cry1} mRNA transcription & 0.350 & [-]$^2$/hr
+	\\
+	$v_{5c1}$ & \textit{Cry1} mRNA degradation & 1.44 & [-]/hr
+	\\
+	$v_{6c2r}$ & \textit{Cry2} mRNA transcription & 0.124 & [-]/hr
+	\\
+	$v_{7c2}$ & \textit{Cry2} mRNA degradation & 2.28 & [-]/hr
+	\\
+	$v_{8vr}$ & \textit{VIP} mRNA transcription & 0.291 & [-]$^2$/hr
+	\\
+	$v_{9v}$ & \textit{VIP} mRNA degradation & 1.35 & [-]/hr
+	\\
+	$v_{10P}$ & \textit{Per} protein degradation & 13.0 & [-]/hr
+	\\
+	$v_{11aCP}$ & PER-CRY dimer formation & 0.493 & ([-]$\times$ hr)$^{-1}$
+	\\
+	$v_{12dcp}$ & PER-CRY dimer dissociation & 0.00380 & 1/hr
+	\\
+	$v_{13C1}$ & \textit{Cry1} protein degradation & 4.12 & [-]/hr
+	\\
+	$v_{14C2}$ & \textit{Cry2} protein degradation & 0.840 & [-]/hr
+	\\
+	$v_{15V}$ & \textit{VIP} protein degradation & 0.723 & 1/hr
+	\\
+	$v_{16C1P}$ & PER-CRY1 dimer degradation & 0.0306 & [-]/hr
+	\\
+	$v_{17C2P}$ & PER-CRY2 dimer degradation & 0.0862 & [-]/hr
+	\\
+	$v_{18V}$ & CREB activation by VIP receptors & 0.789 & [-]/hr
+	\\
+	$v_{19CR}$ & CREB deactivation & 1.27& [-]/hr
+	\\
+	$k_{1p}$ & PER translation & 7.51 & 1/hr	
+	\\
+	$k_{2c}$ & CRY translation & 0.572 & 1/hr
+	\\
+	$k_{3v}$ & VIP translation & 5.50 & 1/hr
+	\\
+	$K_{1p}$ & \textit{Per} transcription constant & 0.264 & [-]
+	\\
+	$K_{2dp}$ & \textit{Per} degradation constant & 0.00795 & [-]
+	\\
+	$K_{3c}$ & \textit{Cry} transcription constant & 0.156 & [-]
+	\\
+	$K_{4dc}$ & \textit{Cry} degradation constant & 1.94 & [-]
+	\\
+	$K_{5v}$ & \textit{VIP} transcription constant & 0.115 & [-]
+	\\
+	$K_{6dv}$ & \textit{VIP} degradation constant & 0.110 & [-]
+	\\
+	$K_{7dP}$ & \textit{Per} protein degradation constant & 0.0372 & [-]
+	\\
+	$K_{8dC}$ & \textit{Cry} protein degradation constant & 4.23 & [-]
+	\\
+	$K_{9dCn}$ & PER-CRY dimer degradation constant & 0.0455 & [-]
+	\\
+	$K_{10V}$ & CREB protein activation constant & 1.46 & [-]
+	\\
+    $K_{11CR}$ & CREB protein deactivation constant & 1.01 & [-]
+    \\[0.0cm]
+	\hline
+\end{tabular}
+}
+\end{center}
+\end{table}

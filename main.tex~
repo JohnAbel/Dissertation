@@ -1,0 +1,256 @@
+\documentclass[11pt,letterpaper,oneside]{book}
+\usepackage[top=1.in, bottom=1in, left=1.in, right=1in, footskip=0.25in]{geometry}
+
+
+% here, we pull in three useful commands from the book class into the article class
+% since this is a book we dont need them tho
+
+% allows a supplement to be made
+\newcommand{\beginsupplement}{%
+         \setcounter{table}{0}
+         \renewcommand{\thetable}{S\arabic{table}}%
+         \setcounter{figure}{0}
+         \renewcommand{\thefigure}{S\arabic{figure}}%
+         \setcounter{section}{0}
+         \renewcommand{\thesection}{S\arabic{section}}
+     }
+      
+
+
+% useful splitcell command for tables that have big entries
+\newcommand{\splitcell}[2][c]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
+
+  \usepackage{ccaption}
+  \usepackage{afterpage}
+\usepackage{fancyhdr}
+
+\fancypagestyle{frontmatter}{%
+  \renewcommand{\headrulewidth}{0pt}% No header rule
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+  \fancyhf{}% Clear header/footer
+  \fancyfoot[C]{\thepage}%
+}
+
+\fancypagestyle{mainmatter}{%
+  \doublespace
+  \renewcommand{\headrulewidth}{0.4pt}% header rule
+  \fancyhf{}
+  \fancyhead[L]{\itshape\nouppercase{\leftmark}}
+  \fancyfoot[C]{\thepage}
+}
+
+
+
+\usepackage[font=rm, labelfont={rm,bf}, margin=0.3in]{caption}
+\usepackage{subcaption}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[sc]{mathpazo}
+\usepackage{helvet}
+\usepackage{amsmath,amssymb,amsfonts,mathrsfs,mathtools,subeqnarray}
+\usepackage{graphicx}
+\usepackage[sort&compress,comma,numbers]{natbib}
+\usepackage{setspace}
+\usepackage{titling}
+\usepackage{bibentry}
+\usepackage[plain]{fancyref}
+\usepackage[linktoc=all]{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+% for chapter on MPC design
+\usepackage{amsthm}
+\theoremstyle{asm}
+\newtheorem{asm}{Assumption}
+
+\theoremstyle{plain}% default
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\newcommand\floor[1]{\lfloor#1\rfloor} \newcommand\ceil[1]{\lceil#1\rceil}
+
+% For figure captions
+%\usepackage[font=rm]{caption}
+%\providecommand{\titlecaption}[2]{\caption[#1]{{\small \rmfamily{ #1.}}\small #2}}
+
+% Make subsections more clear
+\usepackage{titlesec}
+
+%\titleformat{\part}[display]
+%  {\normalfont\sffamily\huge\bfseries}
+%  {\partname\ \thepart:}{16pt}{\Huge}
+\titleformat{\chapter}[display]
+  {\normalfont\rmfamily\Large\bfseries}
+  {\chaptertitlename\ \thechapter}{12pt}{\Large}
+\titleformat{\section}
+  {\normalfont\rmfamily\Large\bfseries}
+  {\thesection}{1em}{}
+
+\titleformat{\subsubsection}
+  {\rmfamily\itshape\bfseries}{\thesubsubsection}{1em}{}
+
+% Imports/macros for chapter 2
+\usepackage{booktabs}
+% \usepackage{chemarr}
+\usepackage{longtable}
+
+% define the imaginary number
+\renewcommand{\j}{\mathrm{i}}
+
+%
+%
+% for use in python
+\usepackage[procnames]{listings}
+\usepackage{color}
+ 
+\definecolor{keywords}{RGB}{255,0,90}
+\definecolor{comments}{RGB}{0,0,113}
+\definecolor{red}{RGB}{160,0,0}
+\definecolor{green}{RGB}{0,150,0}
+ 
+\lstset{language=Python, 
+        basicstyle=\ttfamily\scriptsize, 
+        keywordstyle=\color{keywords},
+        commentstyle=\color{comments},
+        stringstyle=\color{red},
+        showstringspaces=false,
+        identifierstyle=\color{green},
+        procnamekeys={def,class}
+}
+% for python END
+%
+%
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+% for intro
+\usepackage{bm}
+
+% Imports for chapter 5
+\usepackage{nicefrac}
+\usepackage{supertabular}
+
+% For model float
+\usepackage{float}
+\newfloat{model}{thp}{lop} % Frank doesn't want models labeled by chapter
+\floatname{model}{Model}
+\floatstyle{plaintop}
+\restylefloat{model}
+
+% For list of models in the preamble
+% \usepackage{scrhack} % load after "float"
+
+\newcommand*{\fancyrefmodlabelprefix}{mod}
+
+\fancyrefaddcaptions{english}{%
+  \providecommand*{\frefmodname}{model}%
+  \providecommand*{\Frefmodname}{Model}%
+}
+
+\frefformat{plain}{\fancyrefmodlabelprefix}{\frefmodname\fancyrefdefaultspacing#1}
+\Frefformat{plain}{\fancyrefmodlabelprefix}{\Frefmodname\fancyrefdefaultspacing#1}
+
+\frefformat{vario}{\fancyrefmodlabelprefix}{%
+  \frefmodname\fancyrefdefaultspacing#1#3%
+}
+\Frefformat{vario}{\fancyrefmodlabelprefix}{%
+  \Frefmodname\fancyrefdefaultspacing#1#3%
+}
+
+\title{A Computational Approach to Analysis and Control\\of the Mammalian Circadian Oscillator}
+
+% This command is great to only print out a certain chapter, keeping references etc from other chapters.
+%\includeonly{chap6/future}
+
+\begin{document}
+\sloppy % somewhat counter-intuitively, this makes latex respect the page margins more rigorously.
+\doublespace
+\frontmatter
+\pagestyle{frontmatter}
+\include{preamble/titlepage}
+\include{preamble/copyright}
+\include{preamble/abstract}
+
+
+
+{\singlespace
+\tableofcontents
+}
+\include{preamble/acknowledgement}
+\include{preamble/quote}
+
+\mainmatter
+\pagestyle{mainmatter}
+
+\include{chap1/intro}
+\part{Circadian Rhythms in the Suprachiasmatic Nucleus: Networks, Development, and Electrical Activity}
+%\include{chap2/lsl} not putting it in this thesis
+\include{chap3/pnas}
+\include{chap4/carmona}
+\include{chap5/mazuski}
+\include{chap9/future}
+
+\part{Control of the Mammalian Circadian Oscillator}
+\include{chap6/mpc}
+\include{chap7/emerging}
+\include{chap10/future}
+
+
+\backmatter
+{\singlespace
+\bibliographystyle{myIEEEtran.bst}
+\bibliography{condensed_library.bib}
+%\bibliography{library.bib}
+%\include{appendix/appendix}
+}
+
+
+
+
+\end{document}
+
+
+
+
+
+%%% 
+TO DO LIST:
+- add in cristina paper (end jan)
+- correct notation (end jan)
+- write abstract (end feb)
+- write future aims sections (end feb)
+
+%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

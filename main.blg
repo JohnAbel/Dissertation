@@ -1,0 +1,75 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: preamble/titlepage.aux
+A level-1 auxiliary file: preamble/copyright.aux
+A level-1 auxiliary file: preamble/abstract.aux
+A level-1 auxiliary file: preamble/acknowledgement.aux
+A level-1 auxiliary file: preamble/quote.aux
+A level-1 auxiliary file: chap1/intro.aux
+A level-1 auxiliary file: chap3/pnas.aux
+A level-1 auxiliary file: chap4/carmona.aux
+A level-1 auxiliary file: chap5/mazuski.aux
+A level-1 auxiliary file: chap9/future.aux
+A level-1 auxiliary file: chap6/mpc.aux
+A level-1 auxiliary file: chap7/emerging.aux
+A level-1 auxiliary file: chap10/future.aux
+The style file: myIEEEtran.bst.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated field_info (elt_size=4) to 18140 items from 5000.
+Database file #1: condensed_library.bib.bib
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty year in Efimov2009
+Warning--empty journal in jones2014scipy
+Warning--empty year in Julius2017
+
+Done.
+You've used 292 entries,
+            4037 wiz_defined-function locations,
+            2588 strings with 68342 characters,
+and the built_in function-call counts, 275192 in all, are:
+= -- 23197
+> -- 7660
+< -- 2817
++ -- 4263
+- -- 1417
+* -- 13675
+:= -- 39794
+add.period$ -- 584
+call.type$ -- 292
+change.case$ -- 0
+chr.to.int$ -- 6051
+cite$ -- 295
+duplicate$ -- 19276
+empty$ -- 19193
+format.name$ -- 1608
+if$ -- 63786
+int.to.chr$ -- 0
+int.to.str$ -- 292
+missing$ -- 3313
+newline$ -- 899
+num.names$ -- 292
+pop$ -- 6590
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 21392
+stack$ -- 0
+substring$ -- 14990
+swap$ -- 17688
+text.length$ -- 800
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 292
+warning$ -- 3
+while$ -- 1281
+width$ -- 295
+write$ -- 3149
+(There were 3 warnings)
