@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{An introduction to circadian rhythms}{4}{0}{1}
+\beamer@sectionintoc {2}{Dissertation outline}{46}{0}{2}
+\beamer@sectionintoc {3}{Exploring neurotransmission in the suprachiasmatic nucleus}{51}{0}{3}
+\beamer@sectionintoc {4}{Controlling circadian rhythms}{81}{0}{4}
